@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Lato";
+    src: url("fonts/Lato-Regular.ttf") format('truetype');
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lato", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#newMessage {
+  padding-top: 20px;
+}
+
+.navbar-right.form-group {
+  padding-right: 20px;
+}
+
+.msgUser {
+  font-size: 1.2em;
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: 5px 0px 0px 5px;
+  background-color: #eee;
+  color: #555;
+  padding: 5px;
+  height: 34px;
+  width: 20%;
+}
+
+.msgBody {
+  font-size: 1.2em;
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: 0px 5px 5px 0px;
+  border-left: none;
+  color: #333;
+  padding: 5px;
+  height: 34px;
+  width: 80%;
+}
+
+.table {
+  border: 1px solid rgb(221,221,221);
+}

@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  nav.navbar.navbar-default.navbar-fixed-top
+    #title.navbar-brand Chattr
+    .navbar-form.navbar-right
+      .form-group
+        form(ng-submit='changeName()').form-inline
+          .input-group
+            input.form-control(placeholder='Name: {{name}}', ng-model='form.name')
+            .input-group-addon.btn.btn-default(ng-click='changeName()') Change
+
+  #newMessage.form-group.container-fluid
+    form(ng-submit='sendMessage()').form-inline
+      input.form-control(placeholder='Type here...', ng-model='form.text')
+      button.btn.btn-default(type='submit') Send
+  .form-group
+    form(action="/upload", method="post", enctype="multipart/form-data")
+      input(type="file", name="uploadFile")
+      button.btn.btn-default(type='submit')
+        i.fa.fa-file-o Send
+      
+  #main.container-fluid
+    .row
+      .col-md-10
+        #messages(ng-repeat='msg in messages')
+          p.msgUser {{msg.user}}
+          p.msgBody {{msg.text}}
+      .col-md-2
+        table.table.table-striped
+          tr
+            th Users
+          tr(ng-repeat='user in users')
+            td {{user}}

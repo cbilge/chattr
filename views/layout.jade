@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/lib/bootstrap/bootstrap.min.css')
+  body(ng-app='chatApp', ng-controller='chatController')
+    block content
+    include scripts.jade
